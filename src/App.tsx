@@ -1,8 +1,18 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CardList from "./components/CardList";
+import CardDetails from "./components/CardDetails";
 import "./App.css";
 
-function App() {
-  return <div className="App"></div>;
-}
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<CardList />} />
+        <Route path="/card/:cardId" element={<CardDetails />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
