@@ -6,7 +6,7 @@ import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/card-hub">
       <Routes>
         <Route path="/" element={<CardList />} />
         <Route path="/card/:cardId" element={<CardDetails />} />
