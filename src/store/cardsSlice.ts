@@ -33,6 +33,7 @@ const cardsSlice = createSlice({
     },
     removeCard: (state, action: PayloadAction<string>) => {
       state.likedCards = state.likedCards.filter((id) => id !== action.payload);
+      localStorage.setItem('likedCards', JSON.stringify(state.likedCards));
     },
   },
 });
